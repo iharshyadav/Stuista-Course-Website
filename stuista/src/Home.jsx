@@ -60,6 +60,7 @@ const Home = () => {
                         <h2 className="text-5xl font-bold">Be ready for test day</h2>
                         <p className="text-xl">Turn your flashcards into practice tests. Enhanced by AI, Learn and Test mode help you memorize everything you need to know.Get started</p>
                     </div>
+                    
                 </div>
             </div>
          </div>
