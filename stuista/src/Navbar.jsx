@@ -6,15 +6,16 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
-      <div className="main1 w-full h-14 flex items-center">
-        <div className="logo w-2/4 ml-32">
-            <h1 className="text-white">Stuista</h1>
+      <div className="main1 w-full h-16 flex items-center">
+        <div className="logo w-2/4 ml-20 flex gap-20">
+            <h1 className="">Stuista</h1>
+            <button>Home</button>
         </div>
-        <div className="right flex items-center justify-evenly gap-20">
-            <input type="text" className="rounded w-72 h-8 text-black pl-1 outline-none " placeholder="Search" />
-            <Link to="/Login"><button className="text-black bg-white text-xs p-2 rounded-lg font-bold font-sans">LOGIN</button></Link>
-            <button className="text-black bg-white text-xs p-2 rounded-lg font-bold font-sans">SIGNUP</button>
-            <button><FontAwesomeIcon className='mr-10 text-white text-xl' icon={faCartShopping} /></button>
+        <div className="right flex items-center justify-evenly gap-8">
+            <input type="text" className="rounded-2xl h-10 pl-2 outline-none " placeholder="Study sets,textbooks,questions" />
+            <Link to="/Login"><button className=" w-20 text-sm font-normal pb-2 pt-2 pl-4 pr-4 login">Log in</button></Link>
+            <button className="pb-2 pt-2 pl-4 pr-4 text-sm bg-yellow-400 rounded-lg w-24">Sign up</button>
+            <button><FontAwesomeIcon className='mr-10' icon={faCartShopping} /></button>
         </div>
       </div>
     </>

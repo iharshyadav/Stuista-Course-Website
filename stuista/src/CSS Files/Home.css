@@ -7,49 +7,63 @@
 html,body{
     width: 100%;
     height: 100%;
-    
+    background-color: #F6F7FC;
 }
 
 .curousal{
     width: 100%;
+    object-fit: cover;
 }
 
-.strip{
-    background-color: #4741a6;
+.home-img p{
+    top: 55%;
 }
 
-.program{
-    height: 90vh;
-    background-color: #f3f9ff;
+.card{
+    width: 73%;
+    padding: 32px;
+    height: 55vh;
+    padding-top: 7vh;
 }
 
-.program img{
-    width: 8vw;
+.heading h1{
+    color: #2E3856;
 }
 
-.para{
-    color: #5b5656;
+.ace{
+    box-shadow: 0 0.25rem 2rem 0 var(--shadow-with-opacity);
 }
 
+.ace h2{
+    color:#2E3856 ;
+}
 
+.get-started{
+    background-color: #4255ff;
+}
 
+.first-video{
+    height: 55vh;
+    width: 80%;
+}
 
+.left-part{
+    width: 35vw;
+    color: #2E3856;
+}
 
+.left-part h2{
+    line-height: 7vh;
+    margin-bottom: 2.5vh;
+}
 
+.right-part{
+    width: 80vw;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.right-part video{
+    width: 40vw;
+}
 
 
 

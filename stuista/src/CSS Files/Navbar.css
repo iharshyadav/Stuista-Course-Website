@@ -10,5 +10,20 @@ html,body{
 }
 
 .main1{
-    background-color: #4741a6;
+    background-color: #FFFFFF;
+    color: var(--gray-800-gray-100);
+    font-family: hurme_no2-webfont, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height:26px;
+}
+
+.right input{
+    background-color: #F6F7FC;
+    width: 36vw;
+}
+
+.login:hover{
+    background-color: #F6F7FC;
+    border-radius: 17%;
 }
