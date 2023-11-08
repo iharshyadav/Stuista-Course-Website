@@ -4,7 +4,6 @@ import Login from "./Login";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
-  console.log(import.meta.env.VITE_APPWRITE_URL);
   return (
     <div>
       {/* <Navbar/> */}
