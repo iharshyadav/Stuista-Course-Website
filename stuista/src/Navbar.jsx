@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="right flex items-center justify-evenly gap-8">
             <input type="text" className="rounded-2xl h-10 pl-2 outline-none " placeholder="Study sets,textbooks,questions" />
             <Link to="/Login"><button className=" w-20 text-sm font-normal pb-2 pt-2 pl-4 pr-4 login">Log in</button></Link>
-            <button className="pb-2 pt-2 pl-4 pr-4 text-sm bg-yellow-400 rounded-lg w-24">Sign up</button>
+            <Link to="/Signup"><button className="pb-2 pt-2 pl-4 pr-4 text-sm bg-yellow-400 rounded-lg w-24">Sign up</button></Link>
             <button><FontAwesomeIcon className='mr-10' icon={faCartShopping} /></button>
         </div>
       </div>

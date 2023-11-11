@@ -2,8 +2,12 @@ import img from "./Images/LoginImages/img1.png"
 import img1 from "./Images/LoginImages/google1.png"
 import img2 from "./Images/LoginImages/underline.svg"
 import Login1 from "./CSS Files/Login.css"
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faXmark} from '@fortawesome/free-solid-svg-icons'
 
 const Login = () => {
+   
   return (
     <>
     <div className="main flex w-full">
@@ -13,10 +17,13 @@ const Login = () => {
            <h1 className="absolute bottom-24 text-5xl text-white font-bold left-12">Stuista</h1>
         </div>
         <div className="right-part">
-           <div className="status mt-10">
+           <div className="status mt-10 relative flex">
               {/* <button className="mr-12 text-2xl font-bold">Sign up</button> */}
-              <button className="text-2xl font-bold ml-3">Login</button>
-              <img src={img2} alt="" />
+               <div>
+                  <button className="text-2xl font-bold ml-3">Login</button>
+                  <img src={img2} alt="" />
+               </div>
+               <Link to="/"><button><FontAwesomeIcon className="absolute right-28 text-2xl bottom-1" icon={faXmark} /></button></Link>
            </div>
            <button className="flex google items-center justify-center border-2 rounded-lg border-b-4">
               <img className="w-8 mr-4" src={img1} alt="" />
@@ -33,11 +40,11 @@ const Login = () => {
               <input className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" name="" id="" placeholder=""/>
               <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Log in</button>
            </form>
-           <button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4">New to Stuista? Create an account</button>
-        </div>
+           <Link to="/Signup"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4">New to Stuista? Create an account</button></Link>
+         </div>
      </div>
-    </> 
+    </>  
   )
 }
 
-export default Login
+export default Login;

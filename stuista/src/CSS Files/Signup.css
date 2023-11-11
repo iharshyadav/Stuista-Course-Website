@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.left-part{
+    width: 50%;
+}
+
+.right-part{
+    width: 50%;
+}
+
+.left-part img{
+    height: 749px;
+}
+
+.smash{
+    font-size: 2.9vw;
+    color: rgba(0, 0, 0, 0.764);
+    line-height: 7vh;
+}
+
+.status{
+    margin-left: 6vw;
+}
+
+.google{
+    color:#586380;
+    width: 76%;
+    margin-left: 6vw;
+    margin-top: 6vh;
+    height: 7vh;
+}
+
+.or{
+    width: 76%;
+    margin-left: 6vw;
+    text-align: center;
+    margin-top: 6vh;
+}
+
+form{
+    width: 76%;
+    margin-left: 6vw;
+}
+
+form input{
+    background-color: #F6F7FC;
+    height: 6.5vh;
+    margin-top: 1vh;
+}
+
+
+.log-in{
+    margin-top: 6vh;
+    color: white;
+    background: #000;
+    height: 7vh;
+}
+
+
+
