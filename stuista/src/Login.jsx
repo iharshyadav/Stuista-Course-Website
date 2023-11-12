@@ -12,7 +12,7 @@ const Login = () => {
     <>
     <div className="main flex w-full">
         <div className="left-part relative">
-           <img src={img} className="object-cover h-full" alt="" />
+           <img src={img} className="object-cover" alt="" />
            <h1 className="smash absolute top-16 left-12 font-bold">Smash sets in <br /> your sweats.</h1>
            <h1 className="absolute bottom-24 text-5xl text-white font-bold left-12">Stuista</h1>
         </div>

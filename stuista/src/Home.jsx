@@ -7,7 +7,10 @@ import vid1 from "./Videos/homework.mp4"
 import Home1 from "./CSS Files/Home.css"
 import Navbar from "./Navbar"
 import Card from "./Card"
+import { Link } from "react-router-dom"
 const Home = () => {
+
+
 
   return (
     <>
@@ -64,7 +67,10 @@ const Home = () => {
                 </div>
             </div>
          </div>
-      </div>  
+      </div>
+      <div>
+      <Link to='/Storage'><img src={img1} width='400' alt="" /></Link>
+    </div>
     </>
   )
 }

@@ -44,7 +44,7 @@ const SignUp = () => {
               <input className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" name="" id="" placeholder=""/>
               <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Sign up</button>
            </form>
-           <Link to="/Login"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4">Already have an account? Login</button></Link>
+           <Link to="/Login"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4 mt-6">Already have an account? Login</button></Link>
          </div>
      </div>
     </>
