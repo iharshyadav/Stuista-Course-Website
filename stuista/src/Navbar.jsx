@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="main1 w-full h-16 flex items-center fixed z-10">
         <div className="logo w-2/4 ml-20 flex gap-20">
             <h1 className="">Stuista</h1>
-            <Link to="/Videos"><button>Video</button></Link>
+            <Link to="/Courses"><button>Courses</button></Link>
         </div>
         <div className="right flex items-center justify-evenly gap-8">
             <input type="text" className="rounded-2xl h-10 pl-2 outline-none " placeholder="Study sets,textbooks,questions" />
