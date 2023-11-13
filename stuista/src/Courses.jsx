@@ -19,18 +19,18 @@ const Courses = () => {
         <div className='courses flex items-center justify-center flex-col'>
              <div className='flex items-center justify-center gap-32'>
                  <div className=" h-60 object-cover rounded-3xl bg-black">
-                     <Link to='/html'><img className=' rounded-3xl h-60' src="../public/CoursesImages/htmlimg.webp" alt="" /></Link>
+                     <Link to='/html'><img className=' rounded-3xl h-60' src="/CoursesImages/htmlimg.webp" alt="" /></Link>
                  </div>
                  <div className=" h-60  rounded-3xl bg-black">
-                     <Link to='/css'><img className=' rounded-3xl h-60' src="../public/CoursesImages/cssimg.webp" alt="" /></Link>
+                     <Link to='/css'><img className=' rounded-3xl h-60' src="/CoursesImages/cssimg.webp" alt="" /></Link>
                  </div>
              </div>
              <div className='flex items-center justify-center gap-32 mt-16'>
                  <div className=" h-60 rounded-3xl  bg-black">
-                 <Link to='/javascript'><img className=' rounded-3xl h-60' src="../public/CoursesImages/javaimg.jpg" alt="" /></Link>
+                 <Link to='/javascript'><img className=' rounded-3xl h-60' src="/CoursesImages/javaimg.jpg" alt="" /></Link>
                  </div>
                  <div className=" h-60 rounded-3xl bg-black">
-                 <Link to='/react'><img className=' rounded-3xl h-60' src="../public/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/react'><img className=' rounded-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
                  </div>
              </div>
         </div>
