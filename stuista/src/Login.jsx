@@ -2,11 +2,33 @@ import img from "./Images/LoginImages/img1.png"
 import img1 from "./Images/LoginImages/google1.png"
 import img2 from "./Images/LoginImages/underline.svg"
 import Login1 from "./CSS Files/Login.css"
-import { Link } from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faXmark} from '@fortawesome/free-solid-svg-icons'
-
+import { account } from "./Appwrite/auth"
+import { useState } from "react"
 const Login = () => {
+
+   const navigate = useNavigate();
+
+  const [userData, setUserData] = useState({
+    email: "",
+    password:""
+  });
+
+
+
+  // APPWRITE CONFIGURATION
+  const loginFunc = async (e) => {
+   e.preventDefault();
+    try{
+      await account.createEmailSession(userData.email, userData.password);
+      navigate("/");
+    }
+    catch(error){
+        console.log(error);
+    }
+  }
    
   return (
     <>
@@ -35,10 +57,10 @@ const Login = () => {
            </div>
            <form action="" className="flex flex-col">
               <label className="text-black font-semibold mt-12" htmlFor="email">Email</label>
-              <input className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" name="" id="" />
+              <input  onChange={(e) => setUserData({...userData, email: e.target.value})} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" name="" />
               <label className="mt-9 text-black font-semibold" htmlFor="password">Password</label>
-              <input className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" name="" id="" placeholder=""/>
-              <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Log in</button>
+              <input onChange={(e) => setUserData({...userData, password: e.target.value})} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" name=""  placeholder=""/>
+              <button onClick={loginFunc} className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Log in</button>
            </form>
            <Link to="/Signup"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4">New to Stuista? Create an account</button></Link>
          </div>

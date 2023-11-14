@@ -16,23 +16,23 @@ const SignUp = () => {
     })
     const navigate = useNavigate();
 
-const signupUser= async ()=>{
-   // e.preventDefault();
-   
+const signupUser= async (e)=>{
+   e.preventDefault();
+   // try{
 
-   const signUpProcess = account.create(
+   const signUpProcess =await account.create(
       user.name,
       user.email,
-      user.password
+      user.password,
+      user.name
     )
-    signUpProcess.then(function (response) {
-      alert("SignUp successfully");
+    if (signUpProcess) {
+      alert("Signup successful");
       navigate("/Login");
-    }, function (error) {
-      alert(error);
-    })
-   
-}    
+  } else {
+      throw new Error("Signup failed");
+  }
+} 
 
   return (
     <>
