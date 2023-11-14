@@ -2,13 +2,37 @@ import SignUp1 from "./CSS Files/Signup.css"
 import img4 from "./Images/LoginImages/img4.jpg"
 import img1 from "./Images/LoginImages/google1.png"
 import img2 from "./Images/LoginImages/underline.svg"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faXmark} from '@fortawesome/free-solid-svg-icons'
-
+import { useState } from "react"
+import { account } from "./Appwrite/auth"
 const SignUp = () => {
 
-    
+    const [user, setUser] = useState({
+      name:'',
+      email:'',
+      password:''
+    })
+    const navigate = useNavigate();
+
+const signupUser= async ()=>{
+   // e.preventDefault();
+   
+
+   const signUpProcess = account.create(
+      user.name,
+      user.email,
+      user.password
+    )
+    signUpProcess.then(function (response) {
+      alert("SignUp successfully");
+      navigate("/Login");
+    }, function (error) {
+      alert(error);
+    })
+   
+}    
 
   return (
     <>
@@ -37,12 +61,12 @@ const SignUp = () => {
            </div>
            <form action="" className="flex flex-col">
               <label className="text-black font-semibold mt-5" htmlFor="name">Full Name</label>
-              <input className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="text" name="" id="" />
+              <input onChange={(e)=>{setUser({...user,name: e.target.value})}} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="text" />
               <label className="text-black font-semibold mt-8" htmlFor="email">Email</label>
-              <input className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" name="" id="" />
+              <input onChange={(e)=>{setUser({...user,email: e.target.value})}} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" />
               <label className="mt-8 text-black font-semibold" htmlFor="password">Password</label>
-              <input className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" name="" id="" placeholder=""/>
-              <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Sign up</button>
+              <input onChange={(e)=>{setUser({...user,password: e.target.value})}} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" />
+              <button onClick={signupUser} className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Sign up</button>
            </form>
            <Link to="/Login"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4 mt-6">Already have an account? Login</button></Link>
          </div>

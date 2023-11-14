@@ -27,3 +27,7 @@ html,body{
     background-color: #F6F7FC;
     border-radius: 17%;
 }
+
+.map{
+    list-style-type: none
+}

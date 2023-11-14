@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <div className="main1 w-full h-16 flex items-center fixed z-10">
         <div className="logo w-2/4 ml-20 flex gap-20">
-            <h1 className="">Stuista</h1>
+            <Link to='/'><h1 className="cursor-pointer">Stuista</h1></Link>
             <Link to="/Courses"><button>Courses</button></Link>
         </div>
         <div className="right flex items-center justify-evenly gap-8">

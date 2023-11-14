@@ -9,9 +9,12 @@ import Html from './Course/Html'
 import CSS from "./Course/CSS";
 import Javascript from "./Course/Javascript";
 import React1 from "./Course/React1";
-
+import Footer from "./Components/Footer";
 const App = () => {
+
+   
   return (
+    
     <div>
       {/* <Navbar/> */}
       {/* <Home/> */}
