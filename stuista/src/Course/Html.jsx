@@ -1,14 +1,34 @@
 import Navbar from "../Navbar"
 import html1 from '../CSS Files/Html.css'
+import { useEffect, useState } from "react"
+import { account } from "../Appwrite/auth";
+import { useNavigate } from "react-router-dom";
 // import img from '../../public/HtmlImages/img1.png'
 
 const Html = () => {
+   const navigate = useNavigate()
+
+   const [isloaded, setisLoaded] = useState(false);
+   useEffect(()=>{
+      const user = account.get()
+      user.then(
+         (res)=>{
+            setisLoaded(true);
+            // navigate("/html")
+         },
+         (err)=>{
+            navigate('/Login')
+         }
+      )
+   },[navigate]);    
   return (
     <>
        <div className="h-16">
           <Navbar/>
        </div>
-       <div className="main">
+       {isloaded? 
+         (
+            <div className="main">
           <div className="mt-20 ml-60">
              <h1 className="text-3xl font-medium">HTML Crash Course</h1>
           </div>
@@ -90,6 +110,8 @@ const Html = () => {
              </div>
           </div>
        </div>
+         )
+      :<h1> Loading</h1>}
     </>
   )
 }

@@ -1,11 +1,34 @@
 import Navbar from './Navbar'
 import Courses1 from './CSS Files/Courses.css'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
+import { useEffect ,useState} from 'react';
+import { account } from './Appwrite/auth';
 
 const Courses = () => {
+
+  const navigate = useNavigate();
+
+  const [isloading, setisLoading] = useState(false);
+
+  useEffect(()=>{
+    const user  = account.get()
+    user.then(
+    (res)=>{
+      setisLoading(true);
+      navigate('/Courses')
+    },
+    (err)=>{
+      setisLoading(true);
+      console.log(err);
+    }
+    )
+  },[navigate])
   return (
     <>
-      <div className='h-16'>
+      <div>
+        {isloading?(
+         <div>
+            <div className='h-16'>
          <Navbar/>
       </div>
       <div className="main">
@@ -34,6 +57,9 @@ const Courses = () => {
                  </div>
              </div>
         </div>
+      </div>
+         </div>
+        ):<h1>Loading</h1>}
       </div>
     </>
   )

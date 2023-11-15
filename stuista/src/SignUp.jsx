@@ -4,35 +4,66 @@ import img1 from "./Images/LoginImages/google1.png"
 import img2 from "./Images/LoginImages/underline.svg"
 import { Link, useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faXmark} from '@fortawesome/free-solid-svg-icons'
+import { faXmark} from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
 import { account } from "./Appwrite/auth"
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+import {v4 as uuidv4} from 'uuid';
 const SignUp = () => {
+   const navigate = useNavigate();
 
-    const [user, setUser] = useState({
-      name:'',
-      email:'',
-      password:''
-    })
-    const navigate = useNavigate();
+    const [name, setName] = useState();
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
 
-const signupUser= async (e)=>{
-   e.preventDefault();
-   // try{
+    function handleChange(e) { 
+      const eventType = e.target.id
+      console.log(eventType)
+      if (eventType == "name") {
+      setName(e.target.value)
+      } else if(eventType === "email") { 
+         setEmail (e.target.value)
+      } else if (eventType === "password") { 
+         setPassword(e.target.value) 
+      }
+   }
+      
+      async function handleSubmission(e) {
+         e.preventDefault()
+         // console.log({ name, email, password})
 
-   const signUpProcess =await account.create(
-      user.name,
-      user.email,
-      user.password,
-      user.name
-    )
-    if (signUpProcess) {
-      alert("Signup successful");
-      navigate("/Login");
-  } else {
-      throw new Error("Signup failed");
-  }
-} 
+         try {
+            await toast.promise(()=>registerUser(),{
+               pending:"Registering user. Please wait !!!",
+               success:"Registered user successfully",
+               error:"operation Failed"
+            })
+         } catch (error) {
+            console.log(error);
+            toast.error(String(error));
+         }
+      
+      }
+
+      async function registerUser(){
+           
+         try {
+            const response = await account.create(uuidv4(),email,password,name)
+            console.log(response);
+            // navigate('/Login')
+            setEmail('');
+            setName('');
+            setPassword('');
+            if(response.error){
+               throw new Error(response.error)
+            }
+         } catch (error) {
+            throw new Error(error)
+         }
+      }
+
+
 
   return (
     <>
@@ -59,17 +90,24 @@ const signupUser= async (e)=>{
             {/* <p className="mt-6 top-6"></p> */}
             <h2>or email</h2>
            </div>
-           <form action="" className="flex flex-col">
+           <form action="" onSubmit={handleSubmission} className="flex flex-col">
               <label className="text-black font-semibold mt-5" htmlFor="name">Full Name</label>
-              <input onChange={(e)=>{setUser({...user,name: e.target.value})}} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="text" />
+              <input value={name} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="text" id="name" required/>
               <label className="text-black font-semibold mt-8" htmlFor="email">Email</label>
-              <input onChange={(e)=>{setUser({...user,email: e.target.value})}} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" />
+              <input value={email} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" id="email" required/>
               <label className="mt-8 text-black font-semibold" htmlFor="password">Password</label>
-              <input onChange={(e)=>{setUser({...user,password: e.target.value})}} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" />
-              <button onClick={signupUser} className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Sign up</button>
+              <input value={password} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" id="password" required/>
+              <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Sign up</button>
            </form>
            <Link to="/Login"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4 mt-6">Already have an account? Login</button></Link>
          </div>
+         <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          newestOnTop={false}
+          closeOnClick
+          theme="dark"
+         />
      </div>
     </>
   )
