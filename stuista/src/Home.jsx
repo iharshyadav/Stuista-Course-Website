@@ -69,7 +69,6 @@ const Home = () => {
          </div>
       </div>
       <div>
-      <Link to='/Storage'><img src={img1} width='400' alt="" /></Link>
     </div>
     </>
   )

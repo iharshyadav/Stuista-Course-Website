@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.teacher{
+    background-color: #F6F7FC;
+}
+
+.discription{
+    background-color: #F6F7FC;
+}
+
+.box{
+    background-color: #F6F7FC;
+}
+
+.big-box{
+    border-color: rgba(0, 0, 0, 0.214);
+    border-width: 0.1vw;
+}

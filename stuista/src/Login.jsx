@@ -35,10 +35,10 @@ const Login = () => {
            await toast.promise(()=>loginUser(),{
               pending:"Logging in user. Please wait !!!",
               success:"Logged in user successfully",
-              error:"operation Failed"
+            //   error:"operation Failed"
            })
         } catch (error) {
-           console.log(error);
+         //   console.log(error);
            toast.error(String(error));
         }
      

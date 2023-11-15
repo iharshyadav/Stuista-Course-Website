@@ -3,6 +3,7 @@ import html1 from '../CSS Files/Html.css'
 import { useEffect, useState } from "react"
 import { account } from "../Appwrite/auth";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import img from '../../public/HtmlImages/img1.png'
 
 const Html = () => {
@@ -38,13 +39,15 @@ const Html = () => {
                 <hr className="text-black w-20 ml-9 bg-blue-700 h-1 absolute" />
                 <div className="vid-box">
                     <div className='flex items-center justify-center gap-8 ml-7 mt-12'>
+                       <Link to='/firsthtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">1. Introduction to Html</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full border1">
                             <h1 className="pl-4 mt-4 font-semibold ml-2 ">Angela Yu</h1>
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
-                       </div>
+                       </div></Link>
+                       <Link to='/firsthtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">2. The Anatomy of an HTML Tag</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
@@ -52,6 +55,7 @@ const Html = () => {
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
                        </div>
+                       </Link>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">3. What we're building - HTML Personal Site</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
