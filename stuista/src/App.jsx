@@ -2,7 +2,6 @@ import Home from "./Home"
 import Navbar from "./Navbar"
 import Login from "./Login";
 import SignUp from "./SignUp";
-import Storage1 from "./Storage";
 import { Routes, Route } from "react-router-dom";
 import Courses from "./Courses";
 import Html from './Course/Html'
@@ -23,7 +22,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<SignUp />} />
-        <Route path="/Storage" element={<Storage1 />} />
         <Route path="/Courses" element={<Courses/>} />
         <Route path="/html" element={<Html/>} />
         <Route path="/css" element={<CSS/>} />
