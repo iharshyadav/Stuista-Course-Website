@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Client, Storage } from "appwrite";
 import Navbar from '../../Navbar';
 
@@ -6,14 +6,14 @@ const client = new Client();
 
 const storage = new Storage(client);
 
-const FirstVideo = () => {
+const SecVideo = () => {
 
   client
     .setEndpoint('https://cloud.appwrite.io/v1')
     .setProject('654739634a8f958f0d8c')
     ;
 
-   const [html1, sethtml1] = useState("https://cloud.appwrite.io/v1/storage/buckets/654761da456fc400b5f6/files/6554ea6e9220d2a81a08/view?project=654739634a8f958f0d8c&mode=admin")
+   const [html2, sethtml2] = useState("https://cloud.appwrite.io/v1/storage/buckets/654761da456fc400b5f6/files/65559c36caf55ac0bb20/view?project=654739634a8f958f0d8c&mode=admin")
 
   return (
     <div className="main w-full h-screen">
@@ -22,9 +22,9 @@ const FirstVideo = () => {
       </div>
       <div className="w-full h-screen flex items-center gap-8">
         <div className="left-part w-3/5 h-screen rounded-xl ml-12">
-          {html1 && (
+          {html2 && (
             <video className="rounded-xl ml-2" controls>
-              <source src={html1} type="video/mp4" />
+              <source src={html2} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           )}
@@ -68,4 +68,4 @@ const FirstVideo = () => {
   )
 }
 
-export default FirstVideo
+export default SecVideo

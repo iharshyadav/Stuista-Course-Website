@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Client, Storage } from "appwrite";
 import Navbar from '../../Navbar';
 
@@ -6,14 +6,14 @@ const client = new Client();
 
 const storage = new Storage(client);
 
-const FirstVideo = () => {
+const EightVideo = () => {
 
   client
     .setEndpoint('https://cloud.appwrite.io/v1')
     .setProject('654739634a8f958f0d8c')
     ;
 
-   const [html1, sethtml1] = useState("https://cloud.appwrite.io/v1/storage/buckets/654761da456fc400b5f6/files/6554ea6e9220d2a81a08/view?project=654739634a8f958f0d8c&mode=admin")
+   const [html1, sethtml1] = useState("https://cloud.appwrite.io/v1/storage/buckets/654761da456fc400b5f6/files/65559de6812a174a1b85/view?project=654739634a8f958f0d8c&mode=admin")
 
   return (
     <div className="main w-full h-screen">
@@ -68,4 +68,4 @@ const FirstVideo = () => {
   )
 }
 
-export default FirstVideo
+export default EightVideo

@@ -15,6 +15,10 @@ html,body{
     object-fit: cover;
 }
 
+.home-img img{
+    height: 100vh;
+}
+
 .home-img p{
     top: 55%;
 }

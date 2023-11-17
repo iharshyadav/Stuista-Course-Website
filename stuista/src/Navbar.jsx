@@ -34,8 +34,8 @@ const Navbar = () => {
     <>
       <div className="main1 w-full h-16 flex items-center fixed z-10">
         <div className="logo w-2/4 ml-20 flex gap-20">
-            <Link to='/'><h1 className="cursor-pointer">Stuista</h1></Link>
-            <Link to="/Courses"><button>Courses</button></Link>
+            <Link to='/'><h1 className="cursor-pointer logo1">Stuista</h1></Link>
+            <Link to="/Courses"><button className=" pb-2 pt-2 pl-3 pr-3 text-sm login1 rounded-lg mr-5 w-24">Courses</button></Link>
         </div>
         <div className="right flex items-center justify-evenly gap-8">
             <input type="text" className="rounded-2xl h-10 pl-2 outline-none " placeholder="Study sets,textbooks,questions" />
@@ -43,9 +43,10 @@ const Navbar = () => {
               <div className='w-80 flex items-center justify-evenly'>
                   <Link to="/Login"><button className=" w-20 text-sm font-normal pb-2 pt-2 pl-4 pr-4 login">Log in</button></Link>
                   <Link to="/Signup"><button className="pb-2 pt-2 pl-4 pr-4 text-sm bg-yellow-400 rounded-lg w-24">Sign up</button></Link>
-                  <button><FontAwesomeIcon className='' icon={faCartShopping} /></button>
+                  
               </div>
-            ):<button onClick={logOut} className=" w-20 text-sm font-normal pb-2 pt-2 pl-4 pr-4 login">Logout</button>}
+            ):<div className='flex gap-6'><button onClick={logOut} className=" pb-2 pt-2 pl-3 pr-3 text-sm login1 rounded-lg mr-5 w-24">Logout</button>
+            <Link to='/cartlist'><button><FontAwesomeIcon className='mr-10' icon={faCartShopping} /></button></Link></div>}
         </div>
       </div>
     </>

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { account } from "../Appwrite/auth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import img from '../../public/HtmlImages/img1.png'
 
 const Html = () => {
    const navigate = useNavigate()
@@ -47,7 +46,7 @@ const Html = () => {
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
                        </div></Link>
-                       <Link to='/firsthtmlVideos'>
+                       <Link to='/secondhtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">2. The Anatomy of an HTML Tag</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
@@ -56,6 +55,7 @@ const Html = () => {
                          </div>
                        </div>
                        </Link>
+                       <Link to='/thirdhtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">3. What we're building - HTML Personal Site</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
@@ -63,15 +63,19 @@ const Html = () => {
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
                        </div>
+                       </Link>
                     </div>
                     <div className='flex items-center justify-center gap-8 ml-7 mt-12'>
-                    <div className="first rounded-3xl bg-white relative">
+                       <Link to='/fourthhtmlVideos'>
+                       <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">4. What is The HTML Boilerplate</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
                             <h1 className="pl-4 mt-4 font-semibold ml-2 ">Angela Yu</h1>
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
-                       </div>
+                      </div>
+                      </Link>
+                      <Link to='/fifthhtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">5. How to Structure Text in HTML</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
@@ -79,6 +83,8 @@ const Html = () => {
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
                        </div>
+                       </Link>
+                       <Link to='/sixthhtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">6. HTML Lists</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
@@ -86,15 +92,19 @@ const Html = () => {
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
                        </div>
+                       </Link>
                     </div>
                     <div className='flex items-center justify-center gap-8 ml-7 mt-12'>
-                    <div className="first rounded-3xl bg-white relative">
+                      <Link to='/seventhhtmlVideos'>
+                      <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">7. HTML Image Elements</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
                             <h1 className="pl-4 mt-4 font-semibold ml-2 ">Angela Yu</h1>
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
-                       </div>
+                      </div>
+                      </Link>
+                      <Link to='/eighthhtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">8. HTML Links and Anchor Tags</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
@@ -102,6 +112,8 @@ const Html = () => {
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
                        </div>
+                       </Link>
+                       <Link to='/ninethhtmlVideos'>
                        <div className="first rounded-3xl bg-white relative">
                          <h1 className="pl-4 mt-4 font-semibold h-1 ml-2">9. How to Ace this Course</h1>
                          <div className="absolute bottom-3 flex items-center justify-between w-full">
@@ -109,13 +121,14 @@ const Html = () => {
                             <button className="mr-7 mt-4 font-semibold">Teacher</button>
                          </div>
                        </div>
+                       </Link>
                     </div>
                 </div>
              </div>
           </div>
        </div>
          )
-      :<h1> Loading</h1>}
+      :<h1> Please Login....!!!!!</h1>}
     </>
   )
 }

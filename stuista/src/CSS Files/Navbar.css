@@ -18,6 +18,17 @@ html,body{
     line-height:26px;
 }
 
+.logo{
+    margin-top: 0.5vh;
+}
+
+.logo1{
+    margin-top: 0.6vh;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: rgb(209, 199, 52)
+}
+
 .right input{
     background-color: #F6F7FC;
     width: 36vw;
@@ -30,4 +41,8 @@ html,body{
 
 .map{
     list-style-type: none
+}
+
+.login1{
+    background-color: #ffda08;
 }

@@ -6,9 +6,28 @@ import vid from "./Videos/stuista1-video.mp4"
 import vid1 from "./Videos/homework.mp4"
 import Home1 from "./CSS Files/Home.css"
 import Navbar from "./Navbar"
-import Card from "./Card"
+// import Card from "./Card"
 import { Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { account } from './Appwrite/auth'
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+
+   const navigate = useNavigate()
+
+   const [isloaded, setisLoaded] = useState(false);
+   useEffect(()=>{
+      const user = account.get()
+      user.then(
+         (res)=>{
+            setisLoaded(true);    
+         },
+         (err)=>{
+         //   navigate('/Login')
+         // console.log(err);
+         }
+      )
+   },[navigate])
 
 
 
@@ -20,6 +39,9 @@ const Home = () => {
             <img src={img1} className="curousal" alt="" />
             <h1 className="absolute inset-y-1/3 left-52 w-2/4 text-white leading-tight font-bold text-5xl">Experience a new era of <br /> learning</h1>
             <p className="absolute left-52 text-xl font-normal w-1/3 text-white">It is more than flashcards: it’s the #1 global learning platform. Join our community of 300 million learners using practice tests, Expert Solutions and AI-powered tools to improve their grades and reach their goals.</p>
+            {!isloaded?(
+               <Link to='/Signup'><button className="get-started absolute left-52 bottom-28 mt-10 pb-5 pt-5 pl-9 pr-9 rounded-lg text-white font-semibold">Sign Up now</button></Link>
+            ):null}
          </div>
          <div className="w-full heading">
             <h1 className="text-center text-5xl mt-20 mb-12 font-bold">Ace your classes with our new suite of study tools</h1>
@@ -42,9 +64,11 @@ const Home = () => {
                  </div>
                </div>  
             </div>
-            <div className="mt-16 mb-12 text-center">
+            {!isloaded?(
+               <div className="mt-16 mb-12 text-center">
                <button className="get-started mt-10 pb-5 pt-5 pl-8 pr-8 rounded-lg text-white font-semibold">Get Started</button>
             </div>
+            ):null}
             <div className="min-h-full w-full bg-white flex flex-col items-center justify-center">
                 <div className="first-video flex items-center mt-7">
                     <div className="left-part flex flex-col justify-end">
