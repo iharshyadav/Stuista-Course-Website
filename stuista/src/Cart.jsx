@@ -2,15 +2,35 @@ import Navbar from "./Navbar"
 import Cart1 from './CSS Files/Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinus , faPlus, faXmark } from '@fortawesome/free-solid-svg-icons'
-
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { account } from './Appwrite/auth'
 
 const Cart = ({cartItems, onRemoveFromCart,image1}) => {
   console.log('cartItems:', cartItems);
 
+  const navigate = useNavigate()
+
+  const [isloaded, setisLoaded] = useState(false);
+  useEffect(()=>{
+     const user = account.get()
+     user.then(
+        (res)=>{
+           setisLoaded(true); 
+        },
+        (err)=>{
+          // navigate('/Login')
+
+        }
+     )
+  },[navigate])
+
   return (
     <>
     <div className="h-16"><Navbar/></div>
-    <div className="flex gap-20">
+    {isloaded?(
+      <div>
+          <div className="flex gap-20">
        {/* <div className="mt-10 ml-28 w-3/5"> */}
        <div className="left-part mt-10 ml-24 shadow-lg w-3/5 bg-white p-12">
            <h2 className="cart font-semibold text-black text-5xl">Shopping Cart</h2>
@@ -37,14 +57,14 @@ const Cart = ({cartItems, onRemoveFromCart,image1}) => {
                     <div className="w-12 text-center mt-10 text-3xl font-semibold">
                         ₹{item.price} 
                     </div>
-                    <div className="flex flex-col w-36 text-center">
+                    <div className="flex flex-col w-36 text-center ml-5">
                        <h1 className="text-sm font-semibold mt-5">Quantity</h1>
                        <div className="flex items-center justify-center">
-                           <button><FontAwesomeIcon icon={faMinus} /></button>
+                           {/* <button><FontAwesomeIcon icon={faMinus} /></button> */}
                            <div className="border w-20 rounded-3xl h-10 text-center p-2 bg-yellow-400 text-white shadow-xl ml-2 mr-2 mt-1">
                               {item.quantity} 
                            </div>
-                           <button className="plus"><FontAwesomeIcon icon={faPlus} /></button>
+                           {/* <button className="plus"><FontAwesomeIcon icon={faPlus} /></button> */}
                        </div>
                     </div>
                     <div className="mt-11 ml-8">
@@ -86,6 +106,8 @@ const Cart = ({cartItems, onRemoveFromCart,image1}) => {
        {/* </div> */}
     </div>
     <div className="h-16"></div>
+      </div>
+    ):null}
     </>
   );
 };

@@ -85,42 +85,53 @@ const Courses = () => {
       </div>
       <div className="main">
         <div>
-            <h1 className='mt-24 ml-64 tracking-wide text-3xl font-bold'>Explore Courses</h1>
+            <h1 className='mt-24 ml-64 tracking-wide text-5xl font-semibold'>Explore Courses</h1>
             <div className='ml-64 mt-7 text-sm text-blue-600 font-semibold flex justify-start h-9 pb-3 items-center w-60 gap-7'>
                <button className=''>Web Development</button>
                <button className=''>Details</button>
             </div>
         </div>
-        <div className='courses flex items-center justify-center flex-col'>
-             <div className='flex items-center justify-center gap-32'>
-                 <div className=" h-60 object-cover rounded-3xl bg-black">
-                     <Link to='/html'><img className=' rounded-3xl h-60' src="/CoursesImages/htmlimg.webp" alt="" />
-                    
+        <hr className='w-11/12 ml-20 mt-3 hr-line' />
+        <div className='courses flex items-center justify-center flex-col bg-white w-10/12 ml-32 mt-10 pb-20 rounded-full'>
+             <div className='flex items-center justify-center gap-32 mt-16'>
+                 <div className=" rounded-3xl mb-10">
+                     <Link to='/html'><img className=' rounded-t-3xl h-60' src="/CoursesImages/htmlimg.webp" alt="" />
                      </Link>
+                     <Product id={2} name="HTML" price={20000} onAddToCart={handleAddToCart} />
                  </div>
-                 <div className=" h-60  rounded-3xl bg-black">
-                     <Link to='/css'><img className=' rounded-3xl h-60' src="/CoursesImages/cssimg.webp" alt="" /></Link>
+                 <div className="mb-10 rounded-3xl bg-black">
+                     <Link to='/css'><img className='  rounded-t-3xl h-60' src="/CoursesImages/cssimg.webp" alt="" />
+                     </Link>
+                     <Product id={3} name="CSS" price={40000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
-             <div className='flex items-center justify-center gap-32 mt-16'>
-                 <div className=" h-60 rounded-3xl  bg-black">
-                 <Link to='/javascript'><img className=' rounded-3xl h-60' src="/CoursesImages/javaimg.jpg" alt="" /></Link>
+             <div className=' flex items-center justify-center gap-32 mb-10'>
+                 <div className=" h-60 rounded-3xl border">
+                 <Link to='/javascript'><img className='  rounded-t-3xl h-60' src="/CoursesImages/javaimg.jpg" alt="" />
+                 </Link>
+                 <Product id={4} name="JAVASCRIPT" price={36000} onAddToCart={handleAddToCart} />
                  </div>
                  <div className=" h-60 rounded-3xl bg-black">
-                 <Link to='/react'><img className=' rounded-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/react'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Product id={1} name="React Js" price={78000} onAddToCart={handleAddToCart} />
+                 </div>
+             </div>
+             <div className='flex items-center justify-center gap-32 mt-16 mb-10'>
+                 <div className=" h-60 rounded-3xl bg-black">
+                 <Link to='/react'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Product id={5} name="Next Js" price={67500} onAddToCart={handleAddToCart} />
+                 </div>
+                 <div className=" h-60 rounded-3xl bg-black">
+                 <Link to='/react'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Product id={6} name="Mongo DB" price={88000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
         </div>
+        <div className='h-20'></div>
       </div>
          </div>
         ):null}
-            <Link to='/cart'> <h1>Online Store</h1></Link> 
-            <Product id={1} image1={image.src1} name="React Js" price={20} onAddToCart={handleAddToCart} />
-            <Product id={2} name="HTML" price={20} onAddToCart={handleAddToCart} />
-            <Product id={3} name="CSS" price={20} onAddToCart={handleAddToCart} />
-            <Product id={4} name="JAVASCRIPT" price={20} onAddToCart={handleAddToCart} />
-            <Product id={5} name="Next Js" price={20} onAddToCart={handleAddToCart} />
-            <Product id={6} name="Mongo DB" price={20} onAddToCart={handleAddToCart} />
+            {/* <Link to='/cart'> <h1>Online Store</h1></Link>  */}
             <div className='hidden'>
                <Cart cartItems={cartItems} image1={image.src1} onRemoveFromCart={handleRemoveFromCart}/></div>
             </div>

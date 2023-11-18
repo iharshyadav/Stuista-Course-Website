@@ -11,13 +11,18 @@ html,body{
 
 .courses{
     background-color: #F6F7FC;
-    height: 100vh;
+    min-height: 150vh;
     width: 100%;
 }
 
+.courses-height{
+    height: 58vh;
+}
 
-
-
+.hr-line{
+    height: 0.2vh;
+    background-color: rgba(0, 0, 0, 0.179);
+}
 
 
 
