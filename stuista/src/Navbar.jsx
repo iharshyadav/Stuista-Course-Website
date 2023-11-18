@@ -46,7 +46,7 @@ const Navbar = () => {
                   
               </div>
             ):<div className='flex gap-6'><button onClick={logOut} className=" pb-2 pt-2 pl-3 pr-3 text-sm login1 rounded-lg mr-5 w-24">Logout</button>
-            <Link to='/cartlist'><button><FontAwesomeIcon className='mr-10' icon={faCartShopping} /></button></Link></div>}
+            <Link to='/cartlist'><button><FontAwesomeIcon className='mr-10 mt-2 text-xl' icon={faCartShopping} /></button></Link></div>}
         </div>
       </div>
     </>
