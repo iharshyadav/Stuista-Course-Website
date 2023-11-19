@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+.product-mobile{
+    display: none;
+}
+
+@media (max-width:600px){
+    .Product-main{
+        display: none;
+    }
+
+    .product-mobile{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+

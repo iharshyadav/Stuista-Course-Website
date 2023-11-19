@@ -29,11 +29,50 @@ li{
     border-radius: 10%;
 }
 
+.cart-pc{
+    display: block;
+}
 
 
+@media (max-width:600px) {
+
+    .cart-pc1{
+        display: none;
+    }
+
+    .cart-mobile{
+        display: block;
+    }
+
+    .cart-mobile-inner{
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+
+    .image-mobile{
+        width: 18vw;
+        height: 10vh;
+    }
+
+    .quantity-btn{
+        background-color: #FEF3BF;
+    }
+
+   .income-list-2-button{
+    height: 4.5vh;
+    width: 8vw;
+   }
+
+   .boxes{
+    background-color: #FFFFFF;
+   }
+
+   .right-part{
+    background-color: #F6F7FC;
+   }
 
 
-
+}
 
 
 
