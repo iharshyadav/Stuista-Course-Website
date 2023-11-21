@@ -172,7 +172,7 @@ const Home = () => {
 
                  {/************************************** Mobile Part ********************************************/}
 
-      <div className="main-mobile-home w-full overflow-hidden min-h-screen">
+      <div className="main-mobile-home w-full overflow-x-hidden min-h-screen">
         <div className="h-16"></div>
         <div className="relative">
           <img src='../CoursesImages/home-mobile.avif' className="mobile-home-img" alt="" />
@@ -222,18 +222,18 @@ const Home = () => {
                 src="../CoursesImages/video.mp4"
               ></video>
             </div>
-            <div className="home-left-part-mobile mt-5 mb-5">
+            {/* <div className="home-left-part-mobile mt-5 mb-5">
               <h1 className="text-3xl font-semibold mb-3 ">What is Stuista?</h1>
               <p className="">
                 Stuista ia a secure platform makes it possible for every student
                 to instantly access a world of digital learning
               </p>
-            </div>
+            </div> */}
           </div>
 
-          <div className="h-screen">
-            <h1 className="">
-              Coming Soon on Stuista
+          <div className="min-h-96 text-3xl font-semibold mt-6 ml-6">
+            <h1 className="text-center mb-6">
+              Coming Soon on <br />Stuista
             </h1>
             <div className="card-mobile">
               <div className="">
@@ -269,7 +269,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="">
+          <div className="h-screen">
             <div className="first-video-mobile">
               <div className="left-part-mobile">
                 <h2 className="">

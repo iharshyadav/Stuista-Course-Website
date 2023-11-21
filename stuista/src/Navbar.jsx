@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="main1 w-full h-16 flex items-center fixed z-10">
         <div className="logo w-2/4 ml-20 flex gap-20">
             <Link to='/'><h1 className="cursor-pointer logo1">Stuista</h1></Link>
-            <Link to="/Courses"><button className=" pb-2 pt-2 pl-3 pr-3 text-sm login1 rounded-lg mr-5 w-24">Courses</button></Link>
+            <Link to="/Courses"><button className=" pb-2 pt-2 pl-3 pr-3 text-sm login rounded-lg mr-5 w-24">Courses</button></Link>
         </div>
         <div className="right flex items-center justify-evenly gap-8">
             <input type="text" className="rounded-2xl h-10 pl-2 outline-none " placeholder="Study sets,textbooks,questions" />
