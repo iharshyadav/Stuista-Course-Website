@@ -5,7 +5,7 @@ import { account } from "../Appwrite/auth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Html = ({save}) => {
+const Html = () => {
    const navigate = useNavigate()
 
    const [isloaded, setisLoaded] = useState(false);
@@ -26,7 +26,7 @@ const Html = ({save}) => {
        <div className="h-16">
           <Navbar/>
        </div>
-       {isloaded && save? 
+       {isloaded? 
          (
             <div className="main">
           <div className="mt-20 ml-60">

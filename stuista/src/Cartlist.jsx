@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Cart from './Cart'
 import Html from './Course/Html';
+import { database } from './Appwrite/auth';
+import { ID } from 'appwrite';
 
-const Cartlist = () => {
+const Cartlist = ({onAddToCart}) => {
 
 
     const getItemLocal=()=>{
@@ -19,12 +21,27 @@ const Cartlist = () => {
       
 
       // cartItems = getItemLocal();
+    
+
+      // const handleAddToCart = async (item) => {
+    
+      //   try {
+      //     const response = await database.createDocument('65475f35559cb809691b','65475f7d8e95d1320eb4',ID.unique(), {
+      //       Name: item.name,
+      //       Price1: item.price,
+      //     });
+    
+      //     console.log('Product data saved to Appwrite:', response);
+      //   } catch (error) {
+      //     console.error('Error saving product data to Appwrite:', error);
+      //   }
+    
+      // };
+
       const [cartItems, setCartItems] = useState(getItemLocal());
-      const [save, setSave] = useState(false);
 
     useEffect(()=>{
         localStorage.setItem("cart",JSON.stringify(cartItems))
-        setSave(true);
      },[cartItems])
 
     //  const image={
@@ -47,7 +64,7 @@ const Cartlist = () => {
     <div className='w-full'>
     <Cart cartItems={cartItems} totalQuantity={totalQuantity} totalPrice={totalPrice} onRemoveFromCart={handleRemoveFromCart}/></div>
     <div className='hidden'>
-      <Html save={save} />
+      <Html />
     </div>
     </>
   )

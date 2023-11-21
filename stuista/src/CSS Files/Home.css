@@ -42,10 +42,6 @@ html,body{
     color:#2E3856 ;
 }
 
-.get-started{
-    background-color: #4255ff;
-}
-
 .first-video{
     height: 55vh;
     width: 80%;
@@ -68,6 +64,118 @@ html,body{
 .right-part video{
     width: 40vw;
 }
+
+.stuista-desc{
+    display: flex;
+    background-color: #EDF4FF;
+}
+
+.home-right-part{
+    width: 48%;
+    height: 100%;
+    position: relative;
+}
+
+.home-right-part::before{
+    content: "";
+    background-color: #EDF4FF;
+    width: 39.5vw;
+    height: 0.15vh;
+    position: absolute;
+    bottom: 27vh;
+}
+
+.home-left-part{
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+
+.home-left-part h1 {
+ position: absolute;
+ top: 29%;
+ font-size: 4vw;
+ width: 100%;
+ left: 22%;
+ font-weight: 500;
+}
+
+.home-left-part p {
+    position: absolute;
+    top: 45%;
+    font-size: 1.1vw;
+    width: 80%;
+    left: 22%;
+}
+
+.loginhandler{
+    background-color:#EDF4FF;
+    height: 25vh;
+    border-top-right-radius:100%;
+    /* border-bottom-right-radius:50% ; */
+    width: 70%;
+    position: relative;
+}
+
+.get-started{
+    background-color: #4255ffe4;
+}
+
+.get-started:hover{
+    background-color: #4255ff;
+}
+
+.get-started1{
+    position: absolute;
+    background-color: #4255fff8;
+    width: 40vw;
+    padding: 2vw;
+    left: 10%;
+    top: 9%;
+    height: 14vh;
+}
+
+.get-started1:hover{
+    background-color: #4255ff;
+}
+
+.main-mobile-home{
+    display: none;
+}
+
+@media (max-width:600px) {
+    .main-mobile-home{
+        display: block;
+    }
+
+    .main-pc-home{
+        display: none;
+    }
+
+    .mobile-home-img{
+        width: 100vw;
+        /* margin-left: 9vw; */
+        /* height: 102  vh; */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

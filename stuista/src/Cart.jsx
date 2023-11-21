@@ -52,7 +52,7 @@ const Cart = ({cartItems, onRemoveFromCart,totalQuantity,totalPrice}) => {
                     </div>
                     <div className="mt-8">
                       <h4 className="text-xs mt-5">Collection</h4>
-                      <h1 className="text-sm font-semibold">{item.name}</h1>
+                      <h1 className="text-sm font-semibold">{item.Name}</h1>
                     </div>
                 </div>
                 <div className="w-12 text-center mt-10 text-3xl font-semibold">
@@ -89,7 +89,7 @@ const Cart = ({cartItems, onRemoveFromCart,totalQuantity,totalPrice}) => {
                  <h1 className="w-24 text-base font-medium">{item.name}</h1>
                  <hr className="w-36"/>
                  <div className="font-semibold text-lg">
-                     ₹{item.price}
+                     ₹{item.Price1}
                  </div>
                 </li>))}
                 <hr className="mt-3 bg-black" />

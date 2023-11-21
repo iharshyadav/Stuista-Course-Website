@@ -38,7 +38,7 @@ const Login = () => {
             //   error:"operation Failed"
            })
         } catch (error) {
-         //   console.log(error);
+         //   console.log(error);sm:
            toast.error(String(error));
         }
      
@@ -64,37 +64,37 @@ const Login = () => {
    
   return (
     <>
-    <div className="main flex w-full">
-        <div className="left-part relative">
-           <img src={img} className="object-cover" alt="" />
-           <h1 className="smash absolute top-16 left-12 font-bold">Smash sets in <br /> your sweats.</h1>
-           <h1 className="absolute bottom-24 text-5xl text-white font-bold left-12">Stuista</h1>
+    <div className="main-login sm:flex w-full">
+        <div className="left-part left-part-login relative">
+           <img src={img} className="sm:object-cover login-img" alt="" />
+           <h1 className="smash sm:absolute sm:top-16 sm:left-12 sm:font-bold">Smash sets in <br /> your sweats.</h1>
+           <h1 className="sm:absolute sm:bottom-24 sm:text-5xl sm:text-white sm:font-bold sm:left-12">Stuista</h1>
         </div>
-        <div className="right-part">
-           <div className="status mt-10 relative flex">
+        <div className="right-part right-part-login">
+           <div className="status sm:mt-10 sm:relative sm:flex">
               {/* <button className="mr-12 text-2xl font-bold">Sign up</button> */}
                <div>
-                  <button className="text-2xl font-bold ml-3">Login</button>
-                  <img src={img2} alt="" />
+                  <button className="sm:text-2xl sm:font-bold sm:ml-3">Login</button>
+                  <img className="" src={img2} alt="" />
                </div>
-               <Link to="/"><button><FontAwesomeIcon className="absolute right-28 text-2xl bottom-1" icon={faXmark} /></button></Link>
+               <Link to="/"><button><FontAwesomeIcon className="sm:absolute sm:right-28 sm:text-2xl sm:bottom-1" icon={faXmark} /></button></Link>
            </div>
-           <button className="flex google items-center justify-center border-2 rounded-lg border-b-4">
-              <img className="w-8 mr-4" src={img1} alt="" />
-              <p className="text-lg font-semibold">Log in with Google</p>
+           <button className="sm:flex google sm:items-center sm:justify-center sm:border-2 sm:rounded-lg sm:border-b-4">
+              <img className="sm:w-8 sm:mr-4" src={img1} alt="" />
+              <p className="sm:text-lg sm:font-semibold">Log in with Google</p>
            </button>
            <div className="or">
             {/* <p className="mt-6 top-6"></p> */}
             <h2>or email</h2>
            </div>
-           <form action="" onSubmit={handleSubmission} className="flex flex-col">
-              <label className="text-black font-semibold mt-12" htmlFor="email">Email</label>
-              <input  value={email} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" name="" id="email" required />
-              <label className="mt-9 text-black font-semibold" htmlFor="password">Password</label>
-              <input value={password} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" name=""id="password" required/>
-              <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Log in</button>
+           <form action="" onSubmit={handleSubmission} className="sm:flex sm:flex-col">
+              <label className="sm:text-black sm:font-semibold sm:mt-12" htmlFor="email">Email</label>
+              <input  value={email} onChange={handleChange} className="sm:rounded-lg sm:text-black sm:pl-1 sm:border-b-4 sm:outline-none sm:font-semibold" type="email" name="" id="email" required />
+              <label className="sm:mt-9 sm:text-black sm:font-semibold" htmlFor="password">Password</label>
+              <input value={password} onChange={handleChange} className="sm:rounded-lg sm:text-black sm:pl-1 sm:border-b-4 sm:outline-none sm:font-semibold" type="password" name=""id="password" required/>
+              <button className="sm:flex log-in sm:items-center sm:justify-center sm:font-semibold sm:text-md sm:rounded-lg">Log in</button>
            </form>
-           <Link to="/Signup"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4">New to Stuista? Create an account</button></Link>
+           <Link to="/Signup"><button className="sm:flex google sm:items-center sm:justify-center sm:font-bold sm:text-md sm:rounded-lg sm:border-2 sm:border-b-4">New to Stuista? Create an account</button></Link>
          </div>
          <ToastContainer
           position="top-center"
@@ -104,6 +104,48 @@ const Login = () => {
           theme="dark"
          />
      </div>
+
+
+
+
+
+
+
+
+     <div className=" login-mobile w-full overflow-hidden">
+           <div className="status-mobile items-center justify-between mb-9 w-full mt-10 relative flex">
+               <div>
+                  <button className="text-2xl font-bold ml-7">Login</button>
+                  <img className="w-20 ml-5" src={img2} alt="" />
+               </div>
+               <Link to="/"><button><FontAwesomeIcon className="absolute right-7 text-2xl bottom-1" icon={faXmark} /></button></Link>
+           </div>
+           <button className="flex border-2 rounded-lg w-10/12 h-10 items-center pl-2 ml-5">
+              <img className="w-7 ml-7" src={img1} alt="" />
+              <p className="">Log in with Google</p>
+           </button>
+           <div className="or">
+            {/* <p className="mt-6 top-6"></p> */}
+            <h2>or email</h2>
+           </div>
+           <form action="" onSubmit={handleSubmission} className="flex flex-col ml-8">
+              <label className="text-black font-semibold" htmlFor="email">Email</label>
+              <input  value={email} onChange={handleChange} className="rounded-lg border-2 text-black border-b-4 outline-none font-semibold" type="email" name="" id="email" required />
+              <label className="mt-6 text-black font-semibold" htmlFor="password">Password</label>
+              <input value={password} onChange={handleChange} className="rounded-lg text-black border-2 border-b-4 outline-none font-semibold" type="password" name=""id="password" required/>
+              <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Log in</button>
+           </form>
+           <Link to="/Signup"><button className="ml-8 flex google items-center justify-center font-bold text-sm rounded-lg border-2 border-b-4">New to Stuista? Create an account</button></Link>
+         </div>
+         <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          newestOnTop={false}
+          closeOnClick
+          theme="dark"
+         />
+
+
     </>  
   )
 }

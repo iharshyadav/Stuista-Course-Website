@@ -66,5 +66,38 @@ form input{
     height: 7vh;
 }
 
+.login-mobile{
+        display: none;
+}
+
+@media (max-width:600px) {
+
+    .main-login{
+        display: none;
+    }
+    
+    .login-mobile{
+       display: block;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

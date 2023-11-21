@@ -7,9 +7,8 @@ import Product from './Product';
 import Cart from './Cart';
 import Cartlist from './Cartlist';
 import Conf from './Conf/Conf'
-import { v4 as uuidv4 } from 'uuid'; // Import the uuid library
-import html from './Course/Html'
 import Html from './Course/Html';
+import { ID } from 'appwrite';
 
 const Courses = () => {
 
@@ -17,7 +16,7 @@ const Courses = () => {
 
 
   const [isloading, setisLoading] = useState(false);
-  const [save, setSave] = useState(false);
+  // const [save, setSave] = useState(false);
 
   useEffect(()=>{
     const user  = account.get()
@@ -59,19 +58,32 @@ const Courses = () => {
       setCartItems((prevCartItems) => [...prevCartItems, { ...item, quantity: 1 }]);
     }
 
-    // try {
-    //   const response = await database.createDocument('65475f7d8e95d1320eb4', {
-    //     $id: uuidv4(),
-    //     name: item.name,
-    //     price: item.price,
-    //   });
+    try {
+      const response = await database.createDocument('65475f35559cb809691b','65475f7d8e95d1320eb4',ID.unique(), {
+        Name: item.name,
+        Price1: item.price,
+      });
 
-    //   console.log('Product data saved to Appwrite:', response);
-    // } catch (error) {
-    //   console.error('Error saving product data to Appwrite:', error);
-    // }
+      console.log('Product data saved to Appwrite:', response);
+    } catch (error) {
+      console.error('Error saving product data to Appwrite:', error);
+    }
+
+
+    try {
+      const getDocuments = await database.listDocuments(
+        '65475f35559cb809691b',
+        '65475f7d8e95d1320eb4',
+          // ID.unique(),
+      )
+      console.log("successfull",getDocuments);
+  } catch (error) {
+      console.log("Appwrite serive :: getPost :: error", error);
+  }
 
   };
+
+  
 
   const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
 
@@ -82,7 +94,7 @@ const Courses = () => {
   };
 
   useEffect(()=>{
-    setSave(true);
+    // setSave(true);
     localStorage.setItem("cart",JSON.stringify(cartItems))
     localStorage.setItem("cartImage", JSON.stringify(image.src1));
     
@@ -148,7 +160,8 @@ const Courses = () => {
             {/* <Link to='/cart'> <h1>Online Store</h1></Link>  */}
             <div className='hidden'>
                <Cart cartItems={cartItems} image1={image.src1} setCartItems={setCartItems} totalQuantity={totalQuantity} onRemoveFromCart={handleRemoveFromCart}/>
-               <Html save={save}/>
+               {/* <Html/> */}
+               {/* <Cartlist onAddToCart={handleAddToCart} /> */}
                </div>
             </div>
 
