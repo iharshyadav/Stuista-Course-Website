@@ -83,6 +83,9 @@ const Navbar = () => {
         <Link to='/'><li onClick={toggleMenu} className="cursor-pointer py-5 text-xl" >
           Home
         </li></Link>
+        {isloaded?(
+          <li onClick={() => { logOut(); toggleMenu(); }} className="cursor-pointer py-5 text-xl">Log out</li>
+        ):null}
       </ul>
       </div>
         </div>
