@@ -123,29 +123,29 @@ const Courses = () => {
                      <Product id={2} name="HTML" price={20000} onAddToCart={handleAddToCart} />
                  </div>
                  <div className="mb-10 rounded-3xl bg-black">
-                     <Link to='/css'><img className='  rounded-t-3xl h-60' src="/CoursesImages/cssimg.webp" alt="" />
+                     <Link to='/html'><img className='  rounded-t-3xl h-60' src="/CoursesImages/cssimg.webp" alt="" />
                      </Link>
                      <Product id={3} name="CSS" price={40000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
              <div className=' flex items-center justify-center gap-32 mb-10'>
                  <div className=" h-60 rounded-3xl border">
-                 <Link to='/javascript'><img className='  rounded-t-3xl h-60' src="/CoursesImages/javaimg.jpg" alt="" />
+                 <Link to='/html'><img className='  rounded-t-3xl h-60' src="/CoursesImages/javaimg.jpg" alt="" />
                  </Link>
                  <Product id={4} name="JAVASCRIPT" price={36000} onAddToCart={handleAddToCart} />
                  </div>
                  <div className=" h-60 rounded-3xl bg-black">
-                 <Link to='/react'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/html'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
                  <Product id={1} name="React Js" price={78000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
              <div className='flex items-center justify-center gap-32 mt-16 mb-10'>
                  <div className=" h-60 rounded-3xl bg-black">
-                 <Link to='/react'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/html'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
                  <Product id={5} name="Next Js" price={67500} onAddToCart={handleAddToCart} />
                  </div>
                  <div className=" h-60 rounded-3xl bg-black">
-                 <Link to='/react'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/html'><img className='  rounded-t-3xl h-60' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
                  <Product id={6} name="Mongo DB" price={88000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
@@ -191,29 +191,29 @@ const Courses = () => {
                      <Product id={2} name="HTML" price={20000} onAddToCart={handleAddToCart} />
                  </div>
                  <div className="">
-                     <Link to='/css'><img className=' ' src="/CoursesImages/cssimg.webp" alt="" />
+                     <Link to='/html'><img className=' ' src="/CoursesImages/cssimg.webp" alt="" />
                      </Link>
                      <Product id={3} name="CSS" price={40000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
              <div className='img-div'>
                  <div className="">
-                 <Link to='/javascript'><img className=' ' src="/CoursesImages/javaimg.jpg" alt="" />
+                 <Link to='/html'><img className=' ' src="/CoursesImages/javaimg.jpg" alt="" />
                  </Link>
                  <Product id={4} name="JAVASCRIPT" price={36000} onAddToCart={handleAddToCart} />
                  </div>
                  <div className="">
-                 <Link to='/react'><img className=' ' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/html'><img className=' ' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
                  <Product id={1} name="React Js" price={78000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
              <div className='img-div'>
                  <div className=" ">
-                 <Link to='/react'><img className=' ' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/html'><img className=' ' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
                  <Product id={5} name="Next Js" price={67500} onAddToCart={handleAddToCart} />
                  </div>
                  <div className=" ">
-                 <Link to='/react'><img className=' ' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
+                 <Link to='/html'><img className=' ' src="/CoursesImages/reactimg.jpg" alt="" /></Link>
                  <Product id={6} name="Mongo DB" price={88000} onAddToCart={handleAddToCart} />
                  </div>
              </div>
