@@ -66,5 +66,16 @@ form input{
     height: 7vh;
 }
 
+@media (max-width:600px) {
+    .left-part-signup{
+        display: none;
+    }
+
+    .right-part-signup{
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
 
 

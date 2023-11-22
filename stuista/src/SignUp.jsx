@@ -67,13 +67,13 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="main flex w-full">
-        <div className="left-part relative">
+      <div className="main flex w-full sm:w-full">
+        <div className="left-part left-part-signup relative">
            <img src={img4} className="object-cover h-full w-full" alt="" />
            {/* <h1 className="smash absolute top-16 left-12 font-bold">Smash sets in <br /> your sweats.</h1> */}
            <h1 className="absolute bottom-8 text-5xl text-black font-bold left-24">Stuista</h1>
         </div>
-        <div className="right-part">
+        <div className="right-part right-part-signup">
            <div className="status mt-7 flex items-center relative">
               {/* <button className="mr-12 text-2xl font-bold">Sign up</button> */}
               <div>
@@ -90,14 +90,14 @@ const SignUp = () => {
             {/* <p className="mt-6 top-6"></p> */}
             <h2>or email</h2>
            </div>
-           <form action="" onSubmit={handleSubmission} className="flex flex-col">
-              <label className="text-black font-semibold mt-5" htmlFor="name">Full Name</label>
-              <input value={name} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="text" id="name" required/>
-              <label className="text-black font-semibold mt-8" htmlFor="email">Email</label>
-              <input value={email} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="email" id="email" required/>
-              <label className="mt-8 text-black font-semibold" htmlFor="password">Password</label>
-              <input value={password} onChange={handleChange} className="rounded-lg text-black pl-1 border-b-4 outline-none font-semibold" type="password" id="password" required/>
-              <button className="flex log-in items-center justify-center font-semibold text-md rounded-lg">Sign up</button>
+           <form action="" onSubmit={handleSubmission} className="sm:flex flex flex-col sm:flex-col">
+              <label className="sm:text-black sm:font-semibold sm:mt-7" htmlFor="name">Full Name</label>
+              <input value={name} onChange={handleChange} className="sm:rounded-lg sm:text-black sm:pl-1 sm:border-b-4 sm:outline-none sm:font-semibold" type="text" id="name" required/>
+              <label className="sm:text-black sm:font-semibold sm:mt-7" htmlFor="email">Email</label>
+              <input value={email} onChange={handleChange} className="sm:rounded-lg sm:text-black sm:pl-1 sm:border-b-4 sm:outline-none sm:font-semibold" type="email" id="email" required/>
+              <label className="sm:mt-7 sm:text-black sm:font-semibold" htmlFor="password">Password</label>
+              <input value={password} onChange={handleChange} className="sm:rounded-lg sm:text-black sm:pl-1 sm:border-b-4 sm:outline-none sm:font-semibold" type="password" id="password" required/>
+              <button className="sm:flex log-in sm:items-center sm:justify-center sm:font-semibold sm:text-md sm:rounded-lg">Sign up</button>
            </form>
            <Link to="/Login"><button className="flex google items-center justify-center font-bold text-md rounded-lg border-2 border-b-4 mt-6">Already have an account? Login</button></Link>
          </div>

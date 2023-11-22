@@ -6,7 +6,7 @@ import { Link , useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faXmark} from '@fortawesome/free-solid-svg-icons'
 import { account } from "./Appwrite/auth"
-import { useState , useEffect } from "react"
+import { useState } from "react"
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 // import {v4 as uuidv4} from 'uuid';
@@ -104,14 +104,6 @@ const Login = () => {
           theme="dark"
          />
      </div>
-
-
-
-
-
-
-
-
      <div className=" login-mobile w-full overflow-hidden">
            <div className="status-mobile items-center justify-between mb-9 w-full mt-10 relative flex">
                <div>

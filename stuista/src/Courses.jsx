@@ -43,9 +43,7 @@ const Courses = () => {
     }
   }
 
-  const image={
-    src1:"/CoursesImages/htmlimg.webp"
-  }
+
 
   
 
@@ -96,9 +94,8 @@ const Courses = () => {
   useEffect(()=>{
     // setSave(true);
     localStorage.setItem("cart",JSON.stringify(cartItems))
-    localStorage.setItem("cartImage", JSON.stringify(image.src1));
     
- },[cartItems,image.src1])
+ },[cartItems])
 
 
   return (
@@ -159,7 +156,7 @@ const Courses = () => {
         ):null}
             {/* <Link to='/cart'> <h1>Online Store</h1></Link>  */}
             <div className='hidden'>
-               <Cart cartItems={cartItems} image1={image.src1} setCartItems={setCartItems} totalQuantity={totalQuantity} onRemoveFromCart={handleRemoveFromCart}/>
+               <Cart cartItems={cartItems} setCartItems={setCartItems} totalQuantity={totalQuantity} onRemoveFromCart={handleRemoveFromCart}/>
                {/* <Html/> */}
                {/* <Cartlist onAddToCart={handleAddToCart} /> */}
                </div>

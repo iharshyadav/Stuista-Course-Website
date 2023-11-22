@@ -11,6 +11,7 @@ import { account } from './Appwrite/auth'
 import { useNavigate } from "react-router-dom"; 
 import { faAngleLeft, faAngleRight, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Footer from "./Components/Footer"
 // import img from "../public/CoursesImages/teenagers-at-desk.jpg" 
 const Home = () => {
 
@@ -63,7 +64,6 @@ const Home = () => {
           {!isloaded ? (
             <div className="text-center loginhandler">
               <Link to="/Login">
-                {" "}
                 <button className="get-started1 rounded-lg text-white text-3xl font-medium flex items-center justify-between">
                   <h2>Log in as a Student</h2>
                   <FontAwesomeIcon
@@ -166,8 +166,11 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <Footer className={`h-96 bottom-0`}/>
         </div>
       </div>
+      
+      
 
 
                  {/************************************** Mobile Part ********************************************/}
@@ -305,6 +308,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 }
