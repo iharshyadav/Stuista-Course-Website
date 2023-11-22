@@ -16,12 +16,11 @@ const Courses = () => {
 
 
   const [isloading, setisLoading] = useState(false);
-  // const [save, setSave] = useState(false);
 
   useEffect(()=>{
     const user  = account.get()
     user.then(
-    (res)=>{
+    ()=>{
       setisLoading(true);
       navigate('/Courses')
     },
@@ -154,20 +153,10 @@ const Courses = () => {
       </div>
          </div>
         ):null}
-            {/* <Link to='/cart'> <h1>Online Store</h1></Link>  */}
             <div className='hidden'>
                <Cart cartItems={cartItems} setCartItems={setCartItems} totalQuantity={totalQuantity} onRemoveFromCart={handleRemoveFromCart}/>
-               {/* <Html/> */}
-               {/* <Cartlist onAddToCart={handleAddToCart} /> */}
                </div>
             </div>
-
-
-
-
-
-
-
             <div className='mobile-courses'>
             {isloading?(
          <div>

@@ -51,7 +51,7 @@ const SignUp = () => {
          try {
             const response = await account.create(uuidv4(),email,password,name)
             console.log(response);
-            // navigate('/Login')
+            navigate('/Login')
             setEmail('');
             setName('');
             setPassword('');
